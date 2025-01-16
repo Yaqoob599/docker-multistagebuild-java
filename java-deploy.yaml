@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: java-example
+spec:
+  selector:
+    matchLabels:
+      app: java-example
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: java-example
+    spec:
+      serviceAccountName: yaqoob-new
+      imagePullSecrets:
+        - name: ecr-reg-secret
+      containers:
+        - name: java-example
+          image: 140023400586.dkr.ecr.ap-south-1.amazonaws.com/dec-2025:B1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
