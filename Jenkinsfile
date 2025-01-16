@@ -55,7 +55,7 @@ pipeline {
         stage('deplyoing to kubernetes'){
 		    steps{
 		             withKubeConfig(caCertificate: '', clusterName: 'kubernetes', contextName: 'kubernetes-admin@kubernetes', credentialsId: 'kubernetes', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: ' https://172.31.43.46:6443') {
-                             sh 'kubectl apply -f deployment-service.yaml'
+                             sh 'kubectl apply -f java-deploy.yaml'
                              }  
 		    }
                     
