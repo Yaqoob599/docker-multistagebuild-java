@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout Source Code') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Yaqoob599/java-example.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Yaqoob599/docker-multistagebuild-java.git'
             }
         }
       
