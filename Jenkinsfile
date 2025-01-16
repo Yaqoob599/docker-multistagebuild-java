@@ -5,7 +5,7 @@ pipeline {
         AWS_ACCOUNT_ID = "140023400586"
         AWS_DEFAULT_REGION = "ap-south-1"
         IMAGE_REPO_NAME = "docker-pipeline"
-        IMAGE_TAG = "B1"
+        IMAGE_TAG = "AB1"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/dec-2025"
 		    SCANNER_HOME= tool 'sonar-scanner'
     }
