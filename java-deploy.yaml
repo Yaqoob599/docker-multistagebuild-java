@@ -17,7 +17,7 @@ spec:
         - name: ecr-reg-secret
       containers:
         - name: java-example
-          image: 140023400586.dkr.ecr.ap-south-1.amazonaws.com/dec-2025:B1
+          image: 140023400586.dkr.ecr.ap-south-1.amazonaws.com/dec-2025:AB1
           imagePullPolicy: Always
           ports:
             - containerPort: 80
