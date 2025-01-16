@@ -54,10 +54,12 @@ pipeline {
 
         stage('deplyoing to kubernetes'){
 		    steps{
-			  withKubeConfig([credentialsId: 'kubeconfig-secret-id']) {
-                    sh 'kubectl apply -f deployment.yaml'
+		             withKubeConfig(caCertificate: '', clusterName: 'kubernetes', contextName: 'kubernetes-admin@kubernetes', credentialsId: 'kubernetes', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: ' https://172.31.43.46:6443') {
+                             sh 'kubectl apply -f deployment-service.yaml'
+                             }  
+		    }
                     
-                }
+        }
             }
         }
 			   
