@@ -14,7 +14,7 @@ spec:
     spec:
       serviceAccountName: yaqoob-new
       imagePullSecrets:
-        - name: ecr-secret
+        - name: ecr-reg-secret 
       containers:
         - name: java-example
           image: 140023400586.dkr.ecr.ap-south-1.amazonaws.com/dec-2025:AB1
