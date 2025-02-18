@@ -18,7 +18,7 @@ spec:
       containers:
         - name: java-example
           image: 140023400586.dkr.ecr.ap-south-1.amazonaws.com/dec-2025:AB1
-          command: ["/bin/sh", "-c", "sleep infinity"]
+          command: ["java","-jar","/usr/app/gs-maven-0.1.0.jar"]
           imagePullPolicy: Always
           ports:
             - containerPort: 80
